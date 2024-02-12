@@ -1,0 +1,83 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Garamond, serif;
+}
+body * {
+  box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.App {
+  background-color: beige;
+  padding: 20px;
+  height: 100%;
+}
+.rccs {
+  z-index: 1;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form_container {
+  width: 100%;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 20px;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: relative;
+  top: -40px;
+  z-index: 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form_container input,
+button {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.form_container input:hover,
+button:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 20px 8px 24px,
+    rgba(17, 17, 26, 0.1) 20px 16px 56px, rgba(17, 17, 26, 0.1) 20px 24px 80px;
+}
+.form_container button {
+  background-color: darkcyan;
+  cursor: pointer;
+  margin-top: 25px;
+}
+.field_lable {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.field_error {
+  height: 20px;
+  padding-left: 10px;
+  font-size: 12px;
+  color: crimson;
+  font-weight: bold;
+  margin: 0px;
+}
+.success_msg {
+  margin: 20px auto;
+  font-weight: bold;
+  color: cadetblue;
+}
