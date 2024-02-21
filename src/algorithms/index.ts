@@ -56,6 +56,33 @@ const removeIdenticalLetters = (str: string): string => {
   return processChunks(str);
 };
 
+const removeIdenticalLetters2 = (str: string): string => {
+  const stringList: string[] = str.split('')
+  const res : string[] = []
+  const n:number = 4
+  for(let i=0;i<stringList.length;i++){
+      if(i>=stringList.length-(n-1)){
+          res.push(stringList[i])
+      }
+      else if(stringList[i] === stringList[i+1]){
+          let match = true
+          for(let j=i+2;j<=i+(n-1);j++){
+              if(stringList[i] != stringList[j]){
+                  match = false
+                  break
+              }
+          }
+          if(!match){
+              res.push(stringList[i])
+          }
+
+      }else{
+          res.push(stringList[i])
+      }
+  }
+  return res.join('')
+}
+
 const maximumOddSum = (numbers: number[]): number => {
   let highestEven = -Infinity;
   let highestOdd = -Infinity;
